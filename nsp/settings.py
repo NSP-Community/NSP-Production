@@ -28,13 +28,22 @@ QA_SETTINGS = {
     }
 }
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 INSTALLED_APPS = [
     'bootstrapform',
     'notifications',
     'accounts',
     'nspapi',
-    'rest',
     'nspmessage',
+    'rest_framework',
+    'rest',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

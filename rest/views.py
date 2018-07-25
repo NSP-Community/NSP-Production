@@ -12,7 +12,7 @@ from .serializers import (
     NotificationSerializer,
 )
 from accounts.models import UserProfile, Skill
-from project.models import ProjectDetail
+from accounts.models import ProjectDetail
 from notifications.models import Notification
 
 
